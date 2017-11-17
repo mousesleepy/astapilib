@@ -1,0 +1,179 @@
+pbx*CLI> manager show commands
+  Action                       Synopsis
+  ------                       --------
+- WaitEvent                    Wait for an event to occur.
++ DeviceStateList              List the current known device states.
++ PresenceStateList            List the current known presence states.
++ QueueReset                   Reset queue statistics.
++ QueueReload                  Reload a queue, queues, or any sub-section of a q
++ QueueRule                    Queue Rules.
++ QueueMemberRingInUse         Set the ringinuse value for a queue member.
++ QueuePenalty                 Set the penalty for a queue member.
++ QueueLog                     Adds custom entry in queue_log.
++ QueuePause                   Makes a queue member temporarily unavailable.
++ QueueRemove                  Remove interface from queue.
++ QueueAdd                     Add interface to queue.
++ QueueSummary                 Show queue summary.
++ QueueStatus                  Show queue status.
+- Queues                       Queues.
++ PlayDTMF                     Play DTMF signal on a specific channel.
++ StopMixMonitor               Stop recording a call through MixMonitor, and fre
++ MixMonitor                   Record a call and mix the audio during the record
++ MixMonitorMute               Mute / unMute a Mixmonitor recording.
++ VoicemailRefresh             Tell Asterisk to poll mailboxes for a change
++ VoicemailUsersList           List All Voicemail User Information.
++ ControlPlayback              Control the playback of a file being played to a
++ MuteAudio                    Mute an audio stream.
++ DialplanExtensionRemove      Remove an extension from the dialplan
++ DialplanExtensionAdd         Add an extension to the dialplan
++ AgentLogoff                  Sets an agent as no longer logged in.
++ Agents                       Lists agents and their status.
++ ConfbridgeSetSingleVideoSrc  Set a conference user as the single video source
++ ConfbridgeStopRecord         Stop recording a Confbridge conference.
++ ConfbridgeStartRecord        Start recording a Confbridge conference.
++ ConfbridgeLock               Lock a Confbridge conference.
++ ConfbridgeUnlock             Unlock a Confbridge conference.
++ ConfbridgeKick               Kick a Confbridge user.
++ ConfbridgeUnmute             Unmute a Confbridge user.
++ ConfbridgeMute               Mute a Confbridge user.
++ ConfbridgeListRooms          List active conferences.
++ ConfbridgeList               List participants in a conference.
++ PRIDebugFileUnset            Disables file output for PRI debug messages
++ PRIDebugFileSet              Set the file used for PRI debug message output
++ PRIDebugSet                  Set PRI debug levels for a span
++ PRIShowSpans                 Show status of PRI spans.
++ DAHDIRestart                 Fully Restart DAHDI channels (terminates calls).
++ DAHDIShowChannels            Show status of DAHDI channels.
++ DAHDIDNDoff                  Toggle DAHDI channel Do Not Disturb status OFF.
++ DAHDIDNDon                   Toggle DAHDI channel Do Not Disturb status ON.
++ DAHDIDialOffhook             Dial over DAHDI channel while offhook.
++ DAHDIHangup                  Hangup DAHDI Channel.
++ DAHDITransfer                Transfer DAHDI Channel.
+- IAXregistry                  Show IAX registrations.
+- IAXnetstats                  Show IAX Netstats.
+- IAXpeerlist                  List IAX Peers.
+- IAXpeers                     List IAX peers.
++ SIPpeerstatus                Show the status of one or all of the sip peers.
++ SIPnotify                    Send a SIP notify.
++ SIPshowregistry              Show SIP registrations (text format).
++ SIPqualifypeer               Qualify SIP peers.
++ SIPshowpeer                  show SIP peer (text format).
++ SIPpeers                     List SIP peers (text format).
++ Park                         Park a channel.
++ ParkedCalls                  List parked calls.
++ Parkinglots                  Get a list of parking lots
++ FAXStats                     Responds with fax statistics
++ FAXSession                   Responds with a detailed description of a single
++ FAXSessions                  Lists active FAX sessions
+  AGI                          Add an AGI command to execute by Async AGI.
++ UnpauseMonitor               Unpause monitoring of a channel.
++ PauseMonitor                 Pause monitoring of a channel.
++ ChangeMonitor                Change monitoring filename of a channel.
++ StopMonitor                  Stop monitoring a channel.
++ Monitor                      Monitor a channel.
++ BridgeKick                   Kick a channel from a bridge.
++ BridgeDestroy                Destroy a bridge.
++ BridgeInfo                   Get information about a bridge.
++ BridgeList                   Get a list of bridges in the system.
++ BlindTransfer                Blind transfer channel(s) to the given destinatio
+? Filter                       Dynamically add filters for the current manager s
+? AOCMessage                   Generate an Advice of Charge message on a channel
++ ModuleCheck                  Check if module is loaded.
++ ModuleLoad                   Module management.
++ CoreShowChannels             List currently active channels.
++ LoggerRotate                 Reload and rotate the Asterisk logger.
++ Reload                       Send a reload event.
++ CoreStatus                   Show PBX core status variables.
++ CoreSettings                 Show PBX core settings (version etc).
++ UserEvent                    Send an arbitrary event.
++ UpdateConfig                 Update basic configuration.
++ SendText                     Send text message to channel.
++ ListCommands                 List available manager commands.
++ MailboxCount                 Check Mailbox Message Count.
++ MailboxStatus                Check mailbox.
++ AbsoluteTimeout              Set absolute timeout.
++ PresenceState                Check Presence State
++ ExtensionState               Check Extension Status.
++ Command                      Execute Asterisk CLI Command.
++ Originate                    Originate a call.
++ Atxfer                       Attended transfer.
++ Redirect                     Redirect (transfer) a call.
++ ListCategories               List categories in configuration file.
++ CreateConfig                 Creates an empty file in the configuration direct
++ Status                       List channel status.
++ GetConfigJSON                Retrieve configuration (JSON format).
++ GetConfig                    Retrieve configuration.
++ Getvar                       Gets a channel variable or function value.
++ Setvar                       Sets a channel variable or function value.
++ ShowDialPlan                 Show dialplan contexts and extensions
++ Hangup                       Hangup channel.
++ Challenge                    Generate Challenge for MD5 Auth.
++ Login                        Login Manager.
++ Logoff                       Logoff Manager.
++ Events                       Control Event Flow.
++ Ping                         Keepalive command.
++ LocalOptimizeAway            Optimize away a local channel when possible.
++ ExtensionStateList           List the current known extension states.
++ MessageSend                  Send an out of call message to an endpoint.
++ Bridge                       Bridge two channels already in the PBX.
++ BridgeTechnologyUnsuspend    Unsuspend a bridging technology.
++ BridgeTechnologySuspend      Suspend a bridging technology.
++ BridgeTechnologyList         List available bridging technologies and their st
+- DataGet                      Retrieve the data api tree.
++ DBPut                        Put DB entry.
++ DBDelTree                    Delete DB Tree.
++ DBDel                        Delete DB entry.
++ DBGet                        Get DB Entry.
+
+
+
+pbx*CLI> agi show commands topic
+ Dead                        Command   Description
++  No                         answer   Answer channel
+  Yes                 asyncagi break   Interrupts Async AGI
++  No                 channel status   Returns status of the connected channel.
++ Yes                   database del   Removes database key/value
++ Yes               database deltree   Removes database keytree/value
++ Yes                   database get   Gets database value
++ Yes                   database put   Adds/updates database value
++ Yes                           exec   Executes a given Application
++  No                       get data   Prompts for DTMF on a channel
++ Yes              get full variable   Evaluates a channel expression
++  No                     get option   Stream file, prompt for DTMF, with timeout.
++ Yes                   get variable   Gets a channel variable.
++  No                         hangup   Hangup a channel.
++ Yes                           noop   Does nothing.
++  No                   receive char   Receives one character from channels supporting it.
++  No                   receive text   Receives text from channels supporting it.
++  No                    record file   Records to a given file.
++  No                      say alpha   Says a given character string.
++  No                     say digits   Says a given digit string.
++  No                     say number   Says a given number.
++  No                   say phonetic   Says a given character string with phonetics.
++  No                       say date   Says a given date.
++  No                       say time   Says a given time.
++  No                   say datetime   Says a given time as specified by the format given.
++  No                     send image   Sends images to channels supporting it.
++  No                      send text   Sends text to channels supporting it.
++  No                 set autohangup   Autohangup channel in some time.
++  No                   set callerid   Sets callerid for the current channel.
++  No                    set context   Sets channel context.
++  No                  set extension   Changes channel extension.
++  No                      set music   Enable/Disable Music on hold generator
++  No                   set priority   Set channel dialplan priority.
++ Yes                   set variable   Sets a channel variable.
++  No                    stream file   Sends audio file on channel.
++  No            control stream file   Sends audio file on channel and allows the listener to control the stream.
++  No                       tdd mode   Toggles TDD mode (for the deaf).
++ Yes                        verbose   Logs a message to the asterisk verbose log.
++  No                 wait for digit   Waits for a digit to be pressed.
+-  No                  speech create   Creates a speech object.
+-  No                     speech set   Sets a speech engine setting.
+- Yes                 speech destroy   Destroys a speech object.
+-  No            speech load grammar   Loads a grammar.
+- Yes          speech unload grammar   Unloads a grammar.
+-  No        speech activate grammar   Activates a grammar.
+-  No      speech deactivate grammar   Deactivates a grammar.
+-  No               speech recognize   Recognizes speech.
++  No                          gosub   Cause the channel to execute the specified dialplan subroutine.
+pbx*CLI> agi show commands topic
